@@ -27,3 +27,15 @@ puts new_vble
 vble = "overrode vble"
 puts vble
 puts new_vble
+
+#########################################
+
+puts "What's your favorite super hero? "
+input = gets.chomp
+
+puts "your favorite superhero is #{input}"
+
+puts "Input a number"
+num = gets.chomp
+
+puts num.to_i + 7 
