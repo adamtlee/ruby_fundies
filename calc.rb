@@ -29,8 +29,24 @@ num_one = gets.chomp
 puts "Enter the second number: "
 num_two = gets.chomp
 
-puts "the first x second is #{ multiplication(num_one, num_two) }"
-puts "the first + second is #{ addition(num_one, num_two) }"
-puts "the first / second is #{ division(num_one, num_two) }"
-puts "the first % second is #{ mod(num_one, num_two) }"
-puts "the first - second is #{ subtraction(num_one, num_two) }"
+puts "What would you like to do?"
+puts "1 = add, 2 = subtract, 3 = divide, 4 = multiply, 5 = modulo"
+choice = gets.chomp
+
+if  choice == "1"
+    puts "the first + second is #{ addition(num_one, num_two) }"
+elsif choice == "2"
+    puts "the first - second is #{ subtraction(num_one, num_two) }"
+elsif choice == "3"
+    puts "the first / second is #{ division(num_one, num_two) }"
+elsif choice == "4"
+    puts "the first x second is #{ multiplication(num_one, num_two) }"
+elsif choice == "5"
+    puts "the first % second is #{ mod(num_one, num_two) }"
+    
+
+
+
+
+
+
