@@ -9,3 +9,7 @@ puts "Enter the second number: "
 num_two = gets.chomp
 
 puts "the first x second is #{ num_one.to_i * num_two.to_i}"
+puts "the first + second is #{ num_one.to_i + num_two.to_i}"
+puts "the first / second is #{ num_one.to_i / num_two.to_i}"
+puts "the first % second is #{ num_one.to_i % num_two.to_i}"
+puts "the first - second is #{ num_one.to_i - num_two.to_i}"
