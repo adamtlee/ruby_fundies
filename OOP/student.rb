@@ -1,9 +1,9 @@
+require_relative 'authtoolkit'
+
 class Student
-    
+    include Authtoolkit    
     # read and write to the attributes
-    attr_accessor :first_name, :last_name, :email
-    # read access only
-    attr_reader :username
+    attr_accessor :first_name, :last_name, :email, :username, :password
     
     @first_name
     @last_name
@@ -11,24 +11,22 @@ class Student
     @username = "TheGreatGatsby"
     @password
 
-    def set_username
-        @username = "TheGreatGatsby"
+    def initialize(firstname, lastname, username, email, password)
+        @first_name = firstname
+        @last_name = lastname
+        @username = username
+        @email = email
+        @password = password
     end
 
     def to_s
-        "First name: #{@first_name}"
+        "First name: #{@first_name}, Last name: #{@last_name}, Username: #{@username}, email address: #{@email}"
     end
 end
 
-gatsby = Student.new
-puts gatsby
+gatsby = Student.new("Gatsby", "Lee", "TheGreatGatsby", "gatsby@mail.com", "thepassisasecrete")
+morty = Student.new("Morty", "Tran", "MortyMissesRick", "morty@mail.com", "thepassisasecrete")
 
-gatsby.first_name = "Gatsby"
-gatsby.last_name = "Lee"
-gatsby.email = "gatsby@mail.com"
-gatsby.set_username
+gatsby_hashed_password = gatsby.create_hash_digest(gatsby.password)
 
-puts gatsby.first_name
-puts gatsby.last_name
-puts gatsby.email
-puts gatsby.username
+puts gatsby_hashed_password
