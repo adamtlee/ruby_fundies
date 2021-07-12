@@ -5,8 +5,14 @@ class Student
     @username
     @password
 
+    # setter
     def first_name=(name)
         @first_name = name
+    end
+
+    # getter
+    def first_name
+        @first_name
     end
 
     def to_s
@@ -18,5 +24,5 @@ gatsby = Student.new
 puts gatsby
 
 gatsby.first_name = "Gatsby"
-puts gatsby
 
+puts gatsby.first_name
